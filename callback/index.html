@@ -1,0 +1,17 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="referrer" content="no-referrer"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Conectando…</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; base-uri 'none'; form-action http://127.0.0.1:*">
+<style>body{font:16px system-ui,sans-serif;background:#0a0c12;color:#dfe5ee;display:grid;place-items:center;height:100vh;margin:0;text-align:center}a{color:#3ddcb4}</style></head>
+<body><div><h2 id="t">Conectando…</h2><p id="m">Voltando para o aplicativo no seu computador.</p></div>
+<script>
+// Página-ponte: recebe ?code&state da plataforma e entrega ao app local (127.0.0.1). Sem scripts externos, sem armazenar nada.
+(function(){
+  var q=new URLSearchParams(location.search), st=q.get("state")||"", p=st.split(".");
+  var plat=p[0], porta=+p[1];
+  var ok=["tiktok","instagram"].indexOf(plat)>=0 && porta>=1024 && porta<=65535 && p.length===3 && /^[\w-]{10,}$/.test(p[2]);
+  if(!ok){document.getElementById("t").textContent="Link inválido";document.getElementById("m").textContent="Volte ao aplicativo e tente conectar de novo.";return;}
+  var o=new URLSearchParams();
+  ["code","state","error","error_description","error_reason"].forEach(function(k){if(q.get(k))o.set(k,q.get(k));});
+  var rota=plat;
+  location.replace("http://127.0.0.1:"+porta+"/callback/"+rota+"?"+o.toString());
+})();
+</script></body></html>

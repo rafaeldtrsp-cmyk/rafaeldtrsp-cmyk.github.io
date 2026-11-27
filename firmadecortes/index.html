@@ -1,132 +1,138 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Firma de Cortes | Estúdio 3D para criadores</title>
-<meta name="description" content="Estúdio 3D que corta suas lives em cortes 9:16 com legenda, prontos para TikTok, Reels e Shorts.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A Firma de Cortes — Estúdio 3D que corta suas lives</title>
+<meta name="description" content="Um estúdio 3D com funcionários que vigiam suas lives, cortam em 9:16 e deixam o clipe pronto. Pagamento único de R$ 67,99.">
 <style>
-:root{--rosa:#ff2bd6;--roxo:#7b2cff;--ciano:#22d3ee;--amarelo:#ffd21f;--fundo:#07040f;--card:#120a22;--texto:#f7f2ff;--muted:#bfb2de}
+:root{--rosa:#ff2bd6;--roxo:#7b2cff;--ciano:#22d3ee;--amarelo:#ffd21f;--bg:#07040f;--card:#120a22;--txt:#f4efff;--mut:#b9aed6}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:radial-gradient(circle at 50% -10%,rgba(255,43,214,.28),transparent 55%),radial-gradient(circle at 92% 45%,rgba(34,211,238,.14),transparent 45%),var(--fundo);color:var(--texto);line-height:1.55}
-.wrap{max-width:760px;margin:0 auto;padding:0 20px 64px}
-.topo{display:flex;align-items:center;gap:12px;padding:18px 0 8px}
-.ico{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--rosa),var(--roxo));font-size:24px}
-.topo strong{letter-spacing:.08em;font-size:14px;text-transform:uppercase}
-.hero{text-align:center;padding:24px 0 8px}
-.selo{display:inline-block;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#1a0b00;background:var(--amarelo)}
-h1{margin:18px 0 14px;font-size:clamp(30px,7vw,46px);line-height:1.1;font-weight:900}
-h1 .g{background:linear-gradient(90deg,var(--rosa),var(--ciano));-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{color:var(--muted);font-size:18px;max-width:620px;margin:0 auto}
-.btn{display:block;width:100%;text-align:center;text-decoration:none;margin-top:20px;padding:19px 20px;border-radius:16px;font-size:19px;font-weight:900;color:#120700;background:linear-gradient(90deg,var(--amarelo),#ff8a1f 45%,var(--rosa));box-shadow:0 10px 34px rgba(255,43,214,.42);text-transform:uppercase;letter-spacing:.02em}
-.btn:hover{filter:brightness(1.07)}
-.seguro{text-align:center;color:var(--muted);font-size:14px;margin-top:10px}
-.promo{margin-top:28px;padding:26px 22px;border-radius:22px;text-align:center;background:linear-gradient(160deg,#2b0f4f 0%,#120a22 70%);border:2px solid var(--rosa);box-shadow:0 0 50px rgba(255,43,214,.22)}
-.promo .tag{color:var(--ciano);font-weight:800;letter-spacing:.06em;font-size:13px;text-transform:uppercase}
-.promo .de{color:var(--muted);font-size:20px;margin-top:10px}
-.promo .de s{text-decoration:line-through;text-decoration-thickness:3px;text-decoration-color:var(--rosa)}
-.promo .por{font-size:clamp(54px,13vw,84px);font-weight:900;color:var(--amarelo);line-height:1;margin:6px 0}
-.promo .por small{font-size:.4em;vertical-align:super;margin-right:4px}
-.promo .obs{font-size:15px}
-.secao{margin-top:44px}
-.secao h2{font-size:26px;font-weight:900;text-align:center;margin-bottom:8px}
-.secao h2 em{font-style:normal;color:var(--ciano)}
-.secao .sub{text-align:center;color:var(--muted);margin-bottom:20px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.item{background:var(--card);border:1px solid rgba(34,211,238,.32);border-radius:16px;padding:18px 16px}
-.item b{display:block;font-size:15px;color:var(--ciano);letter-spacing:.05em;margin-bottom:4px}
-.item span{color:var(--muted);font-size:15px}
-.item.full{grid-column:1/-1}
-.equipe{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.pessoa{background:var(--card);border:1px solid rgba(255,43,214,.3);border-radius:14px;padding:14px}
-.pessoa b{color:var(--amarelo)}
-.pessoa span{display:block;color:var(--muted);font-size:14px;margin-top:4px}
-.lista{list-style:none;background:var(--card);border-radius:18px;padding:18px;border:1px solid rgba(255,43,214,.3)}
-.lista li{padding:10px 0 10px 30px;position:relative;border-bottom:1px solid rgba(255,255,255,.07)}
-.lista li:last-child{border-bottom:0}
-.lista li::before{content:"✔";position:absolute;left:0;top:10px;color:var(--rosa);font-weight:900}
-.faq details{background:var(--card);border:1px solid rgba(123,44,255,.4);border-radius:14px;padding:16px 18px;margin-bottom:10px}
-.faq summary{cursor:pointer;font-weight:800}
-.faq p{color:var(--muted);margin-top:8px;font-size:15px}
-.final{margin-top:44px;padding:28px 22px;border-radius:22px;text-align:center;background:linear-gradient(160deg,#2b0f4f,#120a22);border:2px solid var(--ciano)}
-.final h2{font-size:24px;font-weight:900}
-.final p{color:var(--muted);margin-top:6px}
-.final .promo{margin-top:14px;border:0;background:transparent;box-shadow:none;padding:0}
-footer{text-align:center;color:var(--muted);font-size:13px;margin-top:40px}
-@media(max-width:520px){.grid,.equipe{grid-template-columns:1fr}}
+body{background:var(--bg);color:var(--txt);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.5;padding-bottom:84px;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;background:radial-gradient(600px 400px at 85% -5%,rgba(123,44,255,.45),transparent 70%),radial-gradient(500px 380px at 0% 25%,rgba(255,43,214,.25),transparent 70%),radial-gradient(500px 400px at 100% 70%,rgba(34,211,238,.18),transparent 70%);z-index:-1}
+.wrap{max-width:760px;margin:0 auto;padding:0 18px}
+.top{display:flex;align-items:center;gap:10px;padding:14px 0}
+.top img{width:42px;height:42px;border-radius:12px;box-shadow:0 0 18px rgba(255,43,214,.55)}
+.top b{font-size:17px;letter-spacing:.3px}
+.top a{margin-left:auto;font-size:13px;font-weight:800;color:#07040f;background:var(--amarelo);padding:9px 14px;border-radius:99px;text-decoration:none}
+.badge{display:inline-block;background:linear-gradient(90deg,var(--rosa),var(--roxo));padding:7px 14px;border-radius:99px;font-size:12px;font-weight:900;letter-spacing:.8px;text-transform:uppercase;margin:14px 0 14px}
+h1{font-size:clamp(34px,10vw,58px);line-height:1.02;font-weight:900;letter-spacing:-1px;text-transform:uppercase}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--rosa),var(--amarelo));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-size:19px;color:var(--mut);margin:14px 0 20px}
+.sub b{color:var(--txt)}
+.price{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin:6px 0 16px}
+.old{font-size:20px;color:var(--mut);text-decoration:line-through;text-decoration-color:var(--rosa);text-decoration-thickness:3px}
+.now{font-size:60px;font-weight:900;line-height:1;color:var(--amarelo);text-shadow:0 0 28px rgba(255,210,31,.45)}
+.now small{font-size:26px}
+.once{font-size:13px;font-weight:800;color:var(--ciano);text-transform:uppercase;letter-spacing:.8px}
+.btn{display:block;text-align:center;text-decoration:none;font-weight:900;font-size:19px;color:#07040f;background:linear-gradient(90deg,var(--amarelo),#ffae1f);padding:18px 20px;border-radius:16px;box-shadow:0 10px 34px rgba(255,210,31,.35);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+.chips span{background:var(--card);border:1px solid rgba(123,44,255,.55);padding:9px 13px;border-radius:99px;font-size:14px;font-weight:700}
+.shot{position:relative;margin:20px 0 6px;border-radius:20px;padding:3px;background:linear-gradient(135deg,var(--rosa),var(--roxo),var(--ciano))}
+.shot img{display:block;width:100%;border-radius:18px;background:#120a22;min-height:140px}
+.shot i{position:absolute;left:12px;bottom:12px;font-style:normal;background:rgba(7,4,15,.85);border:1px solid var(--ciano);color:var(--ciano);font-size:12px;font-weight:800;padding:6px 10px;border-radius:99px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:26px 0}
+.stats div{background:var(--card);border-radius:16px;padding:16px 8px;text-align:center;border:1px solid rgba(255,255,255,.07)}
+.stats b{display:block;font-size:30px;color:var(--ciano)}
+.stats span{font-size:12px;color:var(--mut);font-weight:700}
+h2{font-size:clamp(26px,7vw,38px);line-height:1.08;font-weight:900;text-transform:uppercase;margin:44px 0 8px;letter-spacing:-.5px}
+h2 em{font-style:normal;color:var(--rosa)}
+.lead{color:var(--mut);font-size:17px;margin-bottom:18px}
+.team{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.team div{background:linear-gradient(160deg,#1a0e33,#0e0719);border:1px solid rgba(123,44,255,.4);border-radius:18px;padding:16px}
+.team .e{font-size:38px;display:block;margin-bottom:4px}
+.team b{display:block;font-size:18px}
+.team span{font-size:14px;color:var(--mut)}
+.steps{display:grid;gap:12px;counter-reset:s}
+.steps div{background:var(--card);border-left:5px solid var(--rosa);border-radius:14px;padding:16px 16px 16px 18px;font-size:16px}
+.steps b{display:block;font-size:19px;color:var(--amarelo)}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.feat div{background:var(--card);border-radius:16px;padding:16px;border:1px solid rgba(34,211,238,.25)}
+.feat .e{font-size:30px;display:block}
+.feat b{display:block;font-size:16px;margin:4px 0 2px;color:var(--ciano)}
+.feat span{font-size:13px;color:var(--mut)}
+.final{margin:40px 0 18px;text-align:center;background:linear-gradient(160deg,#2a0f55,#14082a);border:2px solid var(--rosa);border-radius:24px;padding:26px 18px;box-shadow:0 0 44px rgba(255,43,214,.3)}
+.final h2{margin-top:0}
+.final .price{justify-content:center;align-items:center}
+details{background:var(--card);border-radius:14px;padding:14px 16px;margin-bottom:10px;border:1px solid rgba(255,255,255,.07)}
+summary{font-weight:800;cursor:pointer}
+details p{color:var(--mut);margin-top:8px;font-size:15px}
+footer{text-align:center;color:var(--mut);font-size:12px;padding:24px 0}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:9;background:rgba(7,4,15,.94);border-top:1px solid rgba(255,43,214,.5);padding:10px 14px;display:flex;align-items:center;gap:12px}
+.bar div{line-height:1.1;font-size:12px;color:var(--mut)}
+.bar s{color:var(--mut)}
+.bar b{display:block;font-size:24px;color:var(--amarelo)}
+.bar a{margin-left:auto;text-decoration:none;font-weight:900;color:#07040f;background:var(--amarelo);padding:14px 20px;border-radius:14px}
 </style>
 </head>
 <body>
-<main class="wrap">
-  <header class="topo"><span class="ico">✂️</span><strong>A Firma de Cortes</strong></header>
+<div class="wrap">
+  <div class="top"><img src="logo.jpg" alt="" onerror="this.style.display='none'"><b>A Firma de Cortes</b><a href="https://pay.kiwify.com.br/TPIL47Y">QUERO</a></div>
 
-  <section class="hero">
-    <span class="selo">Promoção de Black Friday</span>
-    <h1>Um estúdio 3D que <span class="g">corta suas lives</span> enquanto você faz o resto</h1>
-    <p class="lead">Oito funcionários virtuais vigiam suas lives da Twitch, Kick e YouTube, acham os melhores momentos e entregam cortes 9:16 com legenda, prontos para TikTok, Reels e Shorts.</p>
-    <a class="btn" href="https://pay.kiwify.com.br/TPIL47Y">Quero o meu acesso agora</a>
-    <div class="seguro">Pagamento seguro · Acesso após a confirmação</div>
-  </section>
+  <span class="badge">🔥 Promoção de Black Friday</span>
+  <h1>Suas lives viram <em>cortes virais</em> sozinhas</h1>
+  <p class="sub">Um <b>estúdio 3D com funcionários</b> que vigiam suas lives, acham o melhor momento e entregam o clipe <b>pronto em 9:16</b>.</p>
 
-  <section class="promo">
-    <div class="tag">Oferta por tempo limitado</div>
-    <div class="de">De <s>R$ 97,00</s></div>
-    <div class="por"><small>R$</small>67,99</div>
-    <div class="obs">Pagamento único, sem mensalidade</div>
-    <a class="btn" href="https://pay.kiwify.com.br/TPIL47Y">Garantir a promoção</a>
-  </section>
+  <div class="price"><span class="old">De R$ 97,00</span><span class="now"><small>R$</small> 67,99</span></div>
+  <div class="once">✅ Pagamento único · sem mensalidade</div>
+  <div style="height:14px"></div>
+  <a class="btn" href="https://pay.kiwify.com.br/TPIL47Y">QUERO MEU ESTÚDIO AGORA →</a>
 
-  <section class="secao">
-    <h2>O estúdio <em>3D</em> por dentro</h2>
-    <p class="sub">Cada funcionário faz uma parte do trabalho, do monitoramento à legenda.</p>
-    <div class="equipe">
-      <div class="pessoa"><b>Bruna</b><span>Monitora o chat e encontra os picos de audiência.</span></div>
-      <div class="pessoa"><b>Lívia</b><span>Escreve a legenda de cada corte.</span></div>
-      <div class="pessoa"><b>Caio</b><span>Cria o título para TikTok, Reels e Shorts.</span></div>
-      <div class="pessoa"><b>Thiago</b><span>Monta o vídeo no formato 9:16.</span></div>
-      <div class="pessoa"><b>Duda</b><span>Analisa links do YouTube e prepara cortes.</span></div>
-      <div class="pessoa"><b>Otto</b><span>Cuida do diagnóstico e das correções do PC.</span></div>
-    </div>
-  </section>
+  <div class="shot"><img src="estudio.jpg" alt="Estúdio 3D da Firma de Cortes com os funcionários trabalhando" onerror="this.style.visibility='hidden'"><i>● ESTÚDIO AO VIVO</i></div>
 
-  <section class="secao">
-    <h2>O que o app <em>faz</em></h2>
-    <p class="sub">Tudo o que um clipador faz, e o estúdio ainda melhora cada etapa.</p>
-    <div class="grid">
-      <div class="item"><b>GRAVA</b><span>Captura sua tela e suas lives</span></div>
-      <div class="item"><b>CORTA</b><span>Separa os melhores momentos sozinho</span></div>
-      <div class="item"><b>CLIPA</b><span>Entrega cortes prontos em 9:16</span></div>
-      <div class="item"><b>EDITA</b><span>Coloca legenda e ajusta o ritmo</span></div>
-      <div class="item full"><b>PILOTO AUTOMÁTICO</b><span>Monitora as lives, corta nos picos e publica por você, sem precisar ficar olhando.</span></div>
-    </div>
-  </section>
+  <div class="chips"><span>🎥 Vigia lives</span><span>⚡ Detecta picos</span><span>💬 Legenda</span><span>📱 9:16</span><span>🏷️ Título</span></div>
 
-  <section class="secao">
-    <h2>Por que <em>A Firma</em>?</h2>
-    <ul class="lista">
-      <li>Transforme uma live longa em vários cortes em poucos minutos.</li>
-      <li>Você não precisa saber editar vídeo: o estúdio faz a montagem.</li>
-      <li>Publica com a sua própria conta do YouTube.</li>
-      <li>Um acesso, um preço, sem mensalidade.</li>
-    </ul>
-  </section>
+  <div class="stats">
+    <div><b>24h</b><span>vigiando suas lives</span></div>
+    <div><b>9:16</b><span>pronto p/ Shorts e Reels</span></div>
+    <div><b>1x</b><span>pagamento, sem mensalidade</span></div>
+  </div>
 
-  <section class="secao faq">
-    <h2>Perguntas <em>frequentes</em></h2>
-    <details><summary>Preciso de conta do YouTube?</summary><p>Sim. Para publicar os cortes, você conecta a sua própria conta.</p></details>
-    <details><summary>Preciso saber editar vídeo?</summary><p>Não. O estúdio faz os cortes e a montagem para você.</p></details>
-    <details><summary>Como recebo o acesso?</summary><p>As instruções de acesso chegam logo após a confirmação do pagamento.</p></details>
-  </section>
+  <h2>Conheça o <em>time</em></h2>
+  <p class="lead">Cada funcionário tem uma mesa no estúdio e uma função. Você só assiste.</p>
+  <div class="team">
+    <div><span class="e">👀</span><b>Rafael</b><span>Vigia suas lives e avisa quando algo acontece</span></div>
+    <div><span class="e">📈</span><b>Bruna</b><span>Detecta os picos e monitora o chat</span></div>
+    <div><span class="e">🔗</span><b>Duda</b><span>Busca os links do YouTube</span></div>
+    <div><span class="e">💬</span><b>Lívia</b><span>Cria as legendas do clipe</span></div>
+    <div><span class="e">🏷️</span><b>Caio</b><span>Escreve o título do corte</span></div>
+    <div><span class="e">📱</span><b>Thiago</b><span>Converte tudo para 9:16</span></div>
+    <div style="grid-column:1/-1"><span class="e">🛠️</span><b>Otto</b><span>TI do estúdio: cuida do PC e do diagnóstico</span></div>
+  </div>
 
-  <section class="final">
-    <h2>Pronto para transformar suas lives em cortes?</h2>
-    <p>Aproveite a promoção de Black Friday.</p>
-    <div class="promo"><div class="de">De <s>R$ 97,00</s></div><div class="por"><small>R$</small>67,99</div></div>
-    <a class="btn" href="https://pay.kiwify.com.br/TPIL47Y">Quero o meu acesso agora</a>
-  </section>
+  <h2>Como <em>funciona</em></h2>
+  <div class="steps">
+    <div><b>1. Adicione os canais</b>Cole o link das lives que você quer vigiar.</div>
+    <div><b>2. O time trabalha</b>O estúdio detecta o pico, corta e legenda.</div>
+    <div><b>3. Poste o clipe</b>Chega pronto em 9:16, é só publicar.</div>
+  </div>
 
-  <footer>© A Firma de Cortes. Todos os direitos reservados.</footer>
-</main>
+  <h2>Tudo <em>num só lugar</em></h2>
+  <div class="feat">
+    <div><span class="e">🎥</span><b>Grava</b><span>Acompanha as lives dos canais que você escolher.</span></div>
+    <div><span class="e">✂️</span><b>Corta</b><span>Separa o melhor trecho automaticamente.</span></div>
+    <div><span class="e">💬</span><b>Legenda</b><span>Texto na tela para prender a atenção.</span></div>
+    <div><span class="e">📱</span><b>9:16</b><span>Formato vertical para Shorts, Reels e TikTok.</span></div>
+    <div><span class="e">🗂️</span><b>Galeria</b><span>Todos os cortes organizados num só lugar.</span></div>
+    <div><span class="e">🧊</span><b>Estúdio 3D</b><span>Veja o time trabalhando em tempo real.</span></div>
+  </div>
+
+  <div class="final">
+    <h2>Leve o estúdio <em>hoje</em></h2>
+    <div class="price"><span class="old">De R$ 97,00</span><span class="now"><small>R$</small> 67,99</span></div>
+    <div class="once" style="margin-bottom:16px">Pagamento único · sem mensalidade</div>
+    <a class="btn" href="https://pay.kiwify.com.br/TPIL47Y">QUERO MEU ESTÚDIO AGORA →</a>
+  </div>
+
+  <h2>Dúvidas</h2>
+  <details><summary>É mensalidade?</summary><p>Não. É um pagamento único de R$ 67,99.</p></details>
+  <details><summary>Para que serve?</summary><p>Para transformar lives em clipes verticais 9:16, com legenda e título, sem você editar nada.</p></details>
+  <details><summary>Preciso saber editar vídeo?</summary><p>Não. O time do estúdio faz o trabalho pesado.</p></details>
+
+  <footer>© A Firma de Cortes</footer>
+</div>
+<div class="bar"><div><s>De R$ 97</s><b>R$ 67,99</b></div><a href="https://pay.kiwify.com.br/TPIL47Y">QUERO AGORA</a></div>
 </body>
 </html>
